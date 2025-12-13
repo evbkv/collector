@@ -8,7 +8,6 @@ Code Collector is a Windows batch script that recursively traverses a directory 
 
 * Recursively scans directories and subdirectories
 * Excludes version control directories (.git)
-* Omits LICENSE files, SQLite databases, and the script itself
 * Preserves relative file paths for context
 * Uses UTF-8 encoding for compatibility
 * Creates clean separators between files in output
