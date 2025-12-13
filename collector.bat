@@ -13,10 +13,11 @@ for /r %%f in (*) do (
     echo "%%f" | findstr /i "\\.git\\" >nul
     if not errorlevel 1 set skipfile=1
     
-    if /i "%%~nxf"=="LICENSE" set skipfile=1
     if /i "%%~nxf"=="collector.bat" set skipfile=1
     
     if !skipfile!==0 (
+        if /i "%%~nxf"=="LICENSE" set skipfile=1
+
         if /i "%%~xf"==".sqlite" set skipcontent=1
         if /i "%%~xf"==".db" set skipcontent=1
         if /i "%%~xf"==".db3" set skipcontent=1
